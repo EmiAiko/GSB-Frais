@@ -5,8 +5,7 @@
              <tr>
                 <th class="date">Date</th>
 				<th class="libelle">Libellé</th>  
-                <th class="montant">Montant</th>
-				<th class="statut">Statut</th>
+                <th class="montant">Montant</th>  
                 <th class="action">&nbsp;</th>              
              </tr>
           
@@ -16,14 +15,12 @@
 			$libelle = $unFraisHorsForfait['libelle'];
 			$date = $unFraisHorsForfait['date'];
 			$montant=$unFraisHorsForfait['montant'];
-			$statut=$unFraisHorsForfait['libellestatut'];
 			$id = $unFraisHorsForfait['id'];
 	?>		
             <tr>
                 <td> <?php echo $date ?></td>
                 <td><?php echo $libelle ?></td>
                 <td><?php echo $montant ?></td>
-				<td><?php echo $statut ?></td>
                 <td><a href="index.php?uc=gererFrais&action=supprimerFrais&idFrais=<?php echo $id ?>" 
 				onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Supprimer ce frais</a></td>
              </tr>
@@ -41,7 +38,7 @@
             </legend>
             <p>
               <label for="txtDateHF">Date (jj/mm/aaaa): </label>
-              <input type="date" id="txtDateHF" name="dateFrais" size="10" maxlength="10" value=""  />
+              <input type="text" id="txtDateHF" name="dateFrais" size="10" maxlength="10" value=""  />
             </p>
             <p>
               <label for="txtLibelleHF">Libellé</label>
@@ -49,7 +46,7 @@
             </p>
             <p>
               <label for="txtMontantHF">Montant : </label>
-              <input type="number" id="txtMontantHF" name="montant" size="10" maxlength="10" value="" />
+              <input type="text" id="txtMontantHF" name="montant" size="10" maxlength="10" value="" />
             </p>
           </fieldset>
       </div>
